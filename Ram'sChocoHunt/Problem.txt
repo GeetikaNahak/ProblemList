@@ -1,0 +1,20 @@
+Chefina is a student who loves chocolates, and the college canteen has a wide variety of them. Over the last few weeks, Chefina has bought chocolates repeatedly, and she keeps a list of which chocolates she bought and how many times she bought each one. Every chocolate is represented by a number that uniquely identifies it.
+
+Now, Chefina is curious to find out which chocolate is her "favourite"—the one she has bought the most number of times. If there is more than one chocolate with the same highest count, she considers all of them as her favorite chocolates.
+
+Can you help Chefina determine how many different chocolates can be considered her "favourites"?
+
+Input Format:
+
+The first line contains an integer N, denoting the number of times Chefina bought chocolates.
+The second line contains 𝑁 integers, where each integer represents the ID of a chocolate bought by Chefina.
+
+
+Output Format:
+
+Output a single integer, representing the count of "favorite chocolates" (the chocolates that were bought the maximum number of times).
+Constraints:
+
+1 ≤ N ≤ 50
+1 ≤ a[i] ≤ 10^5
+

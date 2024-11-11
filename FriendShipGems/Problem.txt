@@ -1,0 +1,14 @@
+Two friends, Alex and Bella, were passionate about collecting colorful gems. They wanted to exchange gems with each other, but only those that were in both their collections.
+
+One day, Alex brought his collection of gems to the college. Bella, excited to compare, laid out her own collection. Both of them wanted to know which gems were present in both collections. They quickly realized they had some common gems, but how could they list them out without duplicates?
+
+They decided to create an array for each of their collections, and the challenge was clear: Find out which gems were in both arrays and list them only once.
+
+
+Input:
+
+Two arrays nums1 and nums2 containing the gems.
+
+Output:
+
+Output the unique gems that both collections share. If there are no common gems, Print "empty".

@@ -1,0 +1,7 @@
+Input:
+3
+121
+
+
+Output:
+message is not valid

@@ -1,0 +1,11 @@
+Input:
+2
+4
+16 64 9 81
+2
+5 256
+
+
+Output:
+true true false false
+false true
