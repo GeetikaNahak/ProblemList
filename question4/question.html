@@ -1,24 +1,31 @@
-<p><strong>Ram's Chocolate Hunt</strong></p>
-<p>Ram is a student who loves chocolates, and the college canteen has a wide variety of them. Over the last few weeks, Ram has bought chocolates repeatedly, and he keeps a list of which chocolates he bought and how many times he bought each one. Every chocolate is represented by a number that uniquely identifies it.
+<p><strong>Secret Code Validation</strong></p>
+<p>There is a group of friends who communicate using a secret code. The secret code consists of a string of digits, where each digit represents an important message. However, there is a specific rule to determine if the message is valid or not.
 
-    Now, Ram is curious to find out which chocolate is his "favourite"—the one he has bought the most number of times. If there is more than one chocolate with the same highest count, she considers all of them as her favorite chocolates.
+    The message is considered "Valid" if the sum of the digits at even indices is equal to the sum of the digits at odd indices. For example, if a message string is 12345, the sum of the digits at even indices (0-based index) would be 1 + 3 + 5, and the sum of the digits at odd indices would be 2 + 4. If these two sums are equal, the message is considered valid.
     
-    Can you help Ram determine how many different chocolates can be considered his "favourites"?</p>
+    Your task is to check if the given message (a string of digits) follows this rule. If it does, print "message is valid". Otherwise, print "message is not valid".
+    </p>
 <p>Input Format:
 <br>
-    The first line contains an integer N, denoting the number of times Ram bought chocolates.
-    The second line contains 𝑁 integers, where each integer represents the ID of a chocolate bought by Ram.</p>
+The first line contains an integer N, denoting the length of the string. <br>
+The second line contains a string num consisting of digits. The length of the string will not exceed 
+</p>
 
 <p>Output Format:
 <br>
-    Output a single integer, representing the count of "favorite chocolates" (the chocolates that were bought the maximum number of times).
-    </p>
+Print "message is valid" if the message is valid, otherwise print "message is not valid".</p>
 <hr/>
 <p><strong>Example</strong></p>
-<p>Example 1:</p>
-<p><strong>Input:</strong>Input: <br>
-    1 <br>
+<p><strong>Input:</strong><br>
     5 <br>
+    12345 <br>
     </p>
 <p><strong>Output:</strong></p>
-<pre class="prettyprint"><code>1</code></pre>
+<pre class="prettyprint"><code>message is not valid</code></pre>
+
+<p><strong>Input:</strong><br>
+    3 <br>
+    121 <br>
+    </p>
+<p><strong>Output:</strong></p>
+<pre class="prettyprint"><code>message is valid</code></pre>

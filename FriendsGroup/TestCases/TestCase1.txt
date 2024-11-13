@@ -1,8 +1,0 @@
-Input:
-5
-12345
-
-
-Output:
-message is valid
-

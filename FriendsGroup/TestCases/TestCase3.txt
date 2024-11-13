@@ -1,7 +1,0 @@
-Input:
-6
-123321
-
-
-Output:
-message is valid

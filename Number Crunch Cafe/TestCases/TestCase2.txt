@@ -1,6 +1,0 @@
-Input:
-
-
-
-Output:
-2 4

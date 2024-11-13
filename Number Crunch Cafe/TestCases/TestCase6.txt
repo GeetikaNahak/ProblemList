@@ -1,5 +1,0 @@
-Input:
-
-
-Output:
-61 3
