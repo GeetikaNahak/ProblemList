@@ -4,4 +4,4 @@ Input:
 
 
 Output:
-3
+7
