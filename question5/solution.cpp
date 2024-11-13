@@ -1,45 +1,38 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    int N;
-    cin >> N;  // Read the number of chocolate purchases
+vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+    unordered_set<int> set1(nums1.begin(), nums1.end());
+    unordered_set<int> result;
     
-    vector<int> chocolates(N);
-    int maxID = 0;
-    
-    // Read the chocolate IDs and find the maximum ID
-    for (int i = 0; i < N; ++i) {
-        cin >> chocolates[i];
-        maxID = max(maxID, chocolates[i]);
-    }
-
-    // Create a frequency array to count occurrences of each chocolate ID
-    vector<int> freq(maxID + 1, 0);  // Using maxID + 1 because IDs are 1-based
-
-    // Count the frequency of each chocolate ID
-    for (int i = 0; i < N; ++i) {
-        freq[chocolates[i]]++;
-    }
-
-    // Find the maximum frequency
-    int maxFreq = 0;
-    for (int i = 0; i <= maxID; ++i) {
-        maxFreq = max(maxFreq, freq[i]);
-    }
-
-    // Count how many chocolates have the maximum frequency
-    int favoriteCount = 0;
-    for (int i = 0; i <= maxID; ++i) {
-        if (freq[i] == maxFreq) {
-            favoriteCount++;
+    for (int num : nums2) {
+        if (set1.find(num) != set1.end()) {
+            result.insert(num);
         }
     }
+    
+    return vector<int>(result.begin(), result.end()); 
+}
 
-    // Output the result
-    cout << favoriteCount << endl;
-
+int main() {
+    int n1, n2;
+    cin>>n1>>n2;
+    vector<int>nums1(n1),nums2(n2);
+    for(int i=0;i<n1;i++){
+        cin>>nums1[i];
+    }
+    for(int i=0;i<n2;i++){
+        cin>>nums2[i];
+    }
+    vector<int>res;
+    res=intersection(nums1,nums2);
+    sort(res.begin(),res.end());
+    if(res.size()==0)cout<<"empty"<<endl;
+    else{
+      for(int i=0;i<res.size();i++){
+          cout<<res[i]<<" ";
+      }
+    }
+    cout<<endl;
     return 0;
 }
