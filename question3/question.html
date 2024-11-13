@@ -1,24 +1,23 @@
-<p><strong>Ram's Chocolate Hunt</strong></p>
-<p>Ram is a student who loves chocolates, and the college canteen has a wide variety of them. Over the last few weeks, Ram has bought chocolates repeatedly, and he keeps a list of which chocolates he bought and how many times he bought each one. Every chocolate is represented by a number that uniquely identifies it.
+<p><strong>The Number Crunch Cafe</strong></p>
+<p>In the campus of VIIT College, there was a popular student spot called "The Number Crunch Cafe". Every week, the cafe held a fun contest for students to solve a unique puzzle. This week's puzzle was all about finding the perfect subarray.
 
-    Now, Ram is curious to find out which chocolate is his "favourite"—the one he has bought the most number of times. If there is more than one chocolate with the same highest count, she considers all of them as her favorite chocolates.
-    
-    Can you help Ram determine how many different chocolates can be considered his "favourites"?</p>
+    The cafe had a list of numbers that represented the daily sales of coffee cups. The challenge was simple: find a continuous subarray of these sales numbers such that the sum of the numbers in that subarray is equal to a given target sum.
+    </p>
 <p>Input Format:
 <br>
-    The first line contains an integer N, denoting the number of times Ram bought chocolates.
-    The second line contains 𝑁 integers, where each integer represents the ID of a chocolate bought by Ram.</p>
+The first line of input contains an integer n (1 <= n <= 10^5), the number of days.<br>
+The second line contains n integers representing the sales numbers for each day.</p>
 
 <p>Output Format:
 <br>
-    Output a single integer, representing the count of "favorite chocolates" (the chocolates that were bought the maximum number of times).
-    </p>
+Print the starting and ending indices (1-based) of the subarray that sums up to the target. <br>
+If no such subarray exists, print -1.</p>
 <hr/>
 <p><strong>Example</strong></p>
-<p>Example 1:</p>
-<p><strong>Input:</strong>Input: <br>
-    1 <br>
-    5 <br>
-    </p>
+<p><strong>Input:</strong>
+<pre class="prettyprint"><code>
+5
+1 2 3 7 5
+12</code></pre>
 <p><strong>Output:</strong></p>
-<pre class="prettyprint"><code>1</code></pre>
+<pre class="prettyprint"><code>2 4</code></pre>

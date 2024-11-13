@@ -1,7 +1,0 @@
-Input:
-
-
-
-Output:
-true true true true true
-false false false

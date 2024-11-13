@@ -1,45 +1,37 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
 using namespace std;
 
 int main() {
-    int N;
-    cin >> N;  // Read the number of chocolate purchases
+    int n;
+    cin >> n;
     
-    vector<int> chocolates(N);
-    int maxID = 0;
+    vector<int> sales(n);
     
-    // Read the chocolate IDs and find the maximum ID
-    for (int i = 0; i < N; ++i) {
-        cin >> chocolates[i];
-        maxID = max(maxID, chocolates[i]);
+    for (int i = 0; i < n; ++i) {
+        cin >> sales[i];
     }
+    
+    int target;
+    cin >> target;
 
-    // Create a frequency array to count occurrences of each chocolate ID
-    vector<int> freq(maxID + 1, 0);  // Using maxID + 1 because IDs are 1-based
-
-    // Count the frequency of each chocolate ID
-    for (int i = 0; i < N; ++i) {
-        freq[chocolates[i]]++;
-    }
-
-    // Find the maximum frequency
-    int maxFreq = 0;
-    for (int i = 0; i <= maxID; ++i) {
-        maxFreq = max(maxFreq, freq[i]);
-    }
-
-    // Count how many chocolates have the maximum frequency
-    int favoriteCount = 0;
-    for (int i = 0; i <= maxID; ++i) {
-        if (freq[i] == maxFreq) {
-            favoriteCount++;
+    int currentSum = 0;
+    int left = 0;
+    
+    for (int right = 0; right < n; ++right) {
+        currentSum += sales[right];
+        
+        while (currentSum > target && left <= right) {
+            currentSum -= sales[left];
+            left++;
+        }
+        
+        if (currentSum == target) {
+            cout << left + 1 << " " << right + 1 << endl;
+            return 0;
         }
     }
-
-    // Output the result
-    cout << favoriteCount << endl;
-
+    
+    cout << -1 << endl;
     return 0;
 }
